@@ -15,7 +15,7 @@ class Song
     @@artists << @artist
     @@genres << @genre
     @@genre_count[genre] = 0 unless @@genre_count.any? {|existing_genres,songs| existing_genres == @genre}
-    @@genre_count.each {|genres,songs| songs += 1 if genres == @genre }
+    @@genre_count[genre] += 1
   end
 
   def self.genre_count
