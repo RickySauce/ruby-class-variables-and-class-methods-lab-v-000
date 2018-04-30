@@ -19,7 +19,7 @@ class Song
   end
 
   def genre_count
-    genre_count[genre][songs].count
+    @@genre_count[genre][songs].count
   end
 
   def self.count
