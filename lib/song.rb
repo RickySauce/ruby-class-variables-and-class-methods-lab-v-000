@@ -18,6 +18,10 @@ class Song
     @@genre_count.each {|genres,songs| if genres == @genre songs << self}
   end
 
+  def genre_count
+    genre_count[genre][songs].count
+  end
+
   def self.count
     @@count
   end
