@@ -16,7 +16,7 @@ class Song
     @@genres << @genre
     @@genre_count[genre] = 0 unless @@genre_count.any? {|existing_genres,songs| existing_genres == @genre}
     @@genre_count[genre] += 1
-    @@artist_count[artist] = 0 unless @@artist_count.any? {|existing_artists,songs| existing_artists == @genre}
+    @@artist_count[artist] = 0 unless @@artist_count.any? {|existing_artists,songs| existing_artists == @artist}
     @@artist_count[artist] += 1
   end
 
