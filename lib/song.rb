@@ -14,12 +14,12 @@ class Song
     @@count += 1
     @@artists << @artist
     @@genres << @genre
-    @@genre_count[genre] = [] unless @@genre_count.any? {|existing_genres,songs| existing_genres == @genre}
+    @@genre_count[:genre] = [] unless @@genre_count.any? {|existing_genres,songs| existing_genres == @genre}
     @@genre_count.each {|genres,songs| songs << self if genres == @genre }
   end
 
   def self.genre_count
-    @@genre_count[genre][songs].count
+    @@genre_count[:genre][songs].count
   end
 
   def self.count
