@@ -3,6 +3,7 @@ class Song
 
   @@count = 0
   @@artists = Array.new
+  @@genres = Array.new
 
   def initialize(name,artist,genre)
     @name = name
@@ -10,6 +11,7 @@ class Song
     @genre = genre
     @@count += 1
     @@artists << @artist
+    @@genres << @genre unless @@genres.any? {|existing_genres| existing_genres == genres}
   end
 
   def self.count
